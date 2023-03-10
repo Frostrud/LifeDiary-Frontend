@@ -3,49 +3,45 @@
   background-color: #3498db;
 }
 
-.mainDiv {
+.content {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 20px;
 }
 
-.content {
-  padding: 20px;
+.mainDiv {
+  display: flex;
+  flex-direction: row;
 }
 
-.heroSectionPara {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  border-radius: 20px;
-}
-
-.heroSectionPara p {
-  padding: 20px;
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
 }
 
 .heroSectionButtons {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.heroSectionButtons button{
   padding: 20px;
 }
 
-.heroSectionDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.signUpButton {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
 }
 
-.heroSectionH1 {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.baitDiv {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
 }
 
 /* Navbar Content */
