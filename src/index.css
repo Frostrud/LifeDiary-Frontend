@@ -11,6 +11,7 @@
 }
 
 .mainDiv {
+  padding: 20px;
   display: flex;
   flex-direction: row;
 }
@@ -20,6 +21,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
+  padding: 40px
 }
 
 .heroSectionButtons {
@@ -29,7 +31,7 @@
 }
 
 .heroSectionButtons button{
-  padding: 20px;
+  margin: 20px;
 }
 
 .signUpButton {
@@ -40,7 +42,22 @@
 
 .baitDiv {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #fff;
+}
+
+.baitDiv div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image1 {
+  width: 120px;
+  height: 120px;
   padding: 20px;
 }
 
@@ -62,12 +79,9 @@
   padding: 20px;
 }
 
-.navbar button {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 20px;
+.navbar h2:hover {
+  color: #3498db;
 }
-
 
 .footer {
   background-color: #2980b9;

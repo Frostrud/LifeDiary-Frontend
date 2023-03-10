@@ -14,7 +14,7 @@ function App() {
             <p>Do you know if your pictures on Instagram will still be there in 50 years?</p>
             <div className='heroSectionButtons'>
               <button className='signUpButton'>
-                Join Today for a limited free offer!
+                Join today for a limited free offer!
               </button>
               <button>
                 Or take a look at our current plans
@@ -27,15 +27,15 @@ function App() {
           </div>
           <div className='baitDiv'>
             <div>
+              <img className = "image1" src="https://media.istockphoto.com/id/667795446/photo/the-old-hard-disk-drive-is-disintegrating-in-space.jpg?s=612x612&w=is&k=20&c=uIJVgjQedSVohNKK6o-VG8YQ2ACJeF8LoaVuDxXcO-0=" alt="harddrive"></img>
+              <p>100% safe cloud storage for all your images, videos, family trees, info and everything you want to pass along to your future family and generations!</p>
+            </div>
+            <div>
+              <img className="image1" src="https://media.istockphoto.com/id/667795446/photo/the-old-hard-disk-drive-is-disintegrating-in-space.jpg?s=612x612&w=is&k=20&c=uIJVgjQedSVohNKK6o-VG8YQ2ACJeF8LoaVuDxXcO-0=" alt="harddrive"></img>
               <p>Did you know all bla bla bla?</p>
             </div>
             <div>
-              <p>Did you know all bla bla bla?</p>
-            </div>
-            <div>
-              <p>Did you know all bla bla bla?</p>
-            </div>
-            <div>
+              <img className="image1" src="https://media.istockphoto.com/id/667795446/photo/the-old-hard-disk-drive-is-disintegrating-in-space.jpg?s=612x612&w=is&k=20&c=uIJVgjQedSVohNKK6o-VG8YQ2ACJeF8LoaVuDxXcO-0=" alt="harddrive"></img>
               <p>Did you know all bla bla bla?</p>
             </div>
           </div>
