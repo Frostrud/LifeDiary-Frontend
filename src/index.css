@@ -92,6 +92,40 @@
   color: #3498db;
 }
 
+/* Storage Plans css */
+
+.plansDiv {
+  padding: 20px;
+  display: flex;
+  flex-direction: Row;
+  justify-content: center;
+}
+
+.plansDiv h1 {
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+
+.plansDiv h2 {
+  padding: 20px;
+}
+
+.plansDiv button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+}
+
+.planDiv {
+  background-color: #fff;
+  padding: 20px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
 
 .footer {
   background-color: #2980b9;
