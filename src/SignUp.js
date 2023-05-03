@@ -8,24 +8,23 @@ const SignUp = () => {
                 <div className="planDiv">
                     <div>
                         <h1>
-                            Basic Plan
+                            Sign up for a limited offer of 5% off!
                         </h1>
                     </div>
-                    <div>
-                        <h2>
-                            Space up to 50GB
-                        </h2>
-                        <h2>
-                            Monthly payment
-                        </h2>
-                        <h2>
-                            Can only store images or videos
-                        </h2>
-                        <h2>
-                            Only 5.99$ per month!
-                        </h2>
+                    <div className="SignUpDiv">
+                        <form className="SignUpForm">
+                            <label for="fname">First Name:</label><br></br>
+                            <input type="text" id = "fname"></input><br></br>
+                            <label for="lname">Last Name:</label><br></br>
+                            <input type="text" id = "lname"></input><br></br>
+                            <select id="plans" name="plans">
+                                <option value="basic">Basic</option>
+                                <option value="premium">Premium</option>
+                                <option value="premium+">Premium +</option>
+                            </select>
+                        </form>
                         <button>
-                            Buy now
+                            Register
                         </button>
                     </div>
                 </div>

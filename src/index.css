@@ -138,6 +138,12 @@
 }
 
 
+/* Sign up Page */ 
+
+.SignUpForm {
+  padding: 20px;
+}
+
 
 .footer {
   background-color: #2980b9;
