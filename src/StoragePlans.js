@@ -82,6 +82,7 @@ const StoragePlans = () => {
                     </div>
                 </div>
             </div>
+            <footer>© 2023 LifeDiary </footer>
         </div>
     );
 }

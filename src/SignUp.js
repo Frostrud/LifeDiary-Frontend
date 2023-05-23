@@ -12,7 +12,7 @@ const SignUp = () => {
                         </h1>
                     </div>
                     <div className="SignUpDiv">
-                        <form className="SignUpForm">
+                        <form>
                             <label for="fname">First Name:</label><br></br>
                             <input type="text" id = "fname"></input><br></br>
                             <label for="lname">Last Name:</label><br></br>
@@ -29,6 +29,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
+            <footer>© 2023 LifeDiary </footer>
         </div>
     );
 }
