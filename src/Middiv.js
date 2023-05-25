@@ -6,9 +6,11 @@ const Middiv = ({children}) => {
         <div>
             <NavBar />
             <main className = "content">
-                
                 {children}
-                <footer>© 2023 LifeDiary </footer>
+                <div className="footerDiv">
+                    <footer>© 2023 LifeDiary </footer>
+                </div>
+                
             </main>
         </div>
     );
