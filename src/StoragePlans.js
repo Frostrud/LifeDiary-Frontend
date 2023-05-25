@@ -1,4 +1,3 @@
-import NavBar from "./Navbar";
 import Middiv from "./Middiv";
 
 const StoragePlans = () => {
