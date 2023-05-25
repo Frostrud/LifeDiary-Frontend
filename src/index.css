@@ -65,6 +65,9 @@
 }
 
 .baitDiv p {
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid #3498db;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,6 +103,14 @@
   align-items: center;
 }
 
+.bottomDiv {
+  padding: 20px;
+}
+
+.bottomButton {
+  background-color: #fff;
+  padding: 20px;
+}
 /* Navbar Content */
 
 .navbar {
@@ -173,10 +184,8 @@
   padding: 20px;
 }
 
-
-
-
 /* Middiv stuff*/
+
 .footerDiv {
   border-radius: 20px;
   background-color: #fff;

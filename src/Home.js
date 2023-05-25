@@ -63,6 +63,13 @@ const Home = () => {
                 </div>
                 <img className="image1" src="pexelsPhoto.webp" alt="Happy man looking at clouds"></img>
             </div>
+            <div className="bottomDiv">
+                <Link to="/signup">
+                    <button className='bottomButton'>
+                        Join today for a limited free offer!
+                    </button>
+                </Link>
+            </div>
         </Middiv>
     );
 }
