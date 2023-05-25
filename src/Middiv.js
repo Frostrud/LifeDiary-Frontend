@@ -4,8 +4,9 @@ import NavBar from "./Navbar";
 const Middiv = ({children}) => {
     return (
         <div>
+            <NavBar />
             <main className = "content">
-                <NavBar />
+                
                 {children}
                 <footer>© 2023 LifeDiary </footer>
             </main>
