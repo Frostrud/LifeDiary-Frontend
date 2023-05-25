@@ -1,13 +1,12 @@
 import NavBar from "./Navbar";
+import Middiv from "./Middiv";
 
 const About = () => {
     return (
-        <div>
-            <NavBar></NavBar>
+        <Middiv>
             <div className="plansDiv">
             </div>
-            <footer>© 2023 LifeDiary </footer>
-        </div>
+        </Middiv>
     );
 }
 

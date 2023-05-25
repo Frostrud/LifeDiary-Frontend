@@ -1,13 +1,14 @@
-import NavBar from "./Navbar";
+import React from "react";
+import Middiv from "./Middiv";
 
 const Login = () => {
     return (
         <div>
-            <NavBar></NavBar>
-            <div className="plansDiv">
-            </div>
-            <footer>© 2023 LifeDiary </footer>
+          <Middiv>
+            <h1>Login</h1>
+          </Middiv>
         </div>
+          
     );
 }
 

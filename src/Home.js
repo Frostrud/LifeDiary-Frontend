@@ -1,11 +1,10 @@
 import NavBar from "./Navbar";
 import { Link } from "react-router-dom";
+import Middiv from "./Middiv";
 
 const Home = () => {
     return (
-        <div>
-            <NavBar></NavBar>
-            <main className="content">
+        <Middiv>
                 <div className="mainDiv">
                     <div className='leftSide'>
                         <h1>Welcome to LifeDiary</h1>
@@ -42,9 +41,7 @@ const Home = () => {
                         <p>Did you know that you own nothing of the data you store in the regular cloud storages and have no rights over it?</p>
                     </div>
                 </div>
-                <footer>© 2023 LifeDiary </footer>
-            </main> 
-        </div>
+        </Middiv>
     );
 }
 

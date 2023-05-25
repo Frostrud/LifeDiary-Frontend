@@ -1,9 +1,10 @@
 import NavBar from "./Navbar";
+import Middiv from "./Middiv";
 
 const StoragePlans = () => {
     return (
-        <div>
-            <NavBar></NavBar>
+
+            <Middiv>
             <div className="plansDiv">
                 <div className="planDiv">
                     <div>
@@ -82,8 +83,8 @@ const StoragePlans = () => {
                     </div>
                 </div>
             </div>
-            <footer>© 2023 LifeDiary </footer>
-        </div>
+           </Middiv> 
+
     );
 }
 
