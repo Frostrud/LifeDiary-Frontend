@@ -1,13 +1,20 @@
 import React from "react";
 import Middiv from "./Middiv";
 import { useNavigate } from 'react-router-dom';
+import useLogin from "./hooks/useLogin";
 
 const Login = () => {
+  const {loading, error, login} = useLogin();
+
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
     navigate('/collections');
+
+    await login(email, password)
   };
 
 
