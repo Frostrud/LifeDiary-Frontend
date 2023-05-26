@@ -40,10 +40,24 @@
   background-color: #3498db;
   color: #fff;
   padding: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.signUpButton:hover {
+  background-color: #f1c40f;
+  color: #000000;
 }
 
 .otherPlansButton {
   padding: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.otherPlansButton:hover {
+  background-color: #f1c40f;
+  color: #000000;
 }
 
 .baitDiv {
@@ -111,6 +125,13 @@
 .bottomButton {
   background-color: #fff;
   padding: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.bottomButton:hover {
+  background-color: #f1c40f;
+  color: #000000;
 }
 /* Navbar Content */
 
@@ -226,6 +247,7 @@ input[type="password"] {
   padding: 5px;
   margin-bottom: 10px;
 }
+
 input[type="submit"] {
   width: 100%;
   padding: 10px;
