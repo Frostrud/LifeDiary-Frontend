@@ -4,18 +4,18 @@ const useLogin = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const login = async (email, password) => {
+  const login = async (username, password) => {
     setLoading(true);
     setError(null);
 
     try {
       // API request
-      const response = await fetch('/api/login', {
+      const response = await fetch('http://localhost:8080/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
       });
 
       if (response.ok) {

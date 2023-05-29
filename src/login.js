@@ -10,11 +10,17 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const email = event.target.email.value;
+    const username = event.target.email.value;
     const password = event.target.password.value;
-    navigate('/collections');
+    
+    await login(username, password)
 
-    await login(email, password)
+    if(loading === false) {
+      navigate('/collections');
+    } else {
+    var x = document.getElementById("errorMessage");
+    x.style.display = "none"
+    }
   };
 
 
@@ -27,6 +33,7 @@ const Login = () => {
         <input type="text" id="email" name="email" required></input><br></br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required></input><br></br>
+        <h1 className="errorMessage">Error </h1>
         <input type="submit" value="Login"></input><br></br>
       </form>
     </div>
