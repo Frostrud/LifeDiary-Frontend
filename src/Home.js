@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Middiv from "./Middiv";
+import Middiv from "./components/Middiv";
 
 const Home = () => {
     return (

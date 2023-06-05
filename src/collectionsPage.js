@@ -1,4 +1,4 @@
-import Middiv from "./Middiv";
+import Middiv from "./components/Middiv";
 
 
 const CollectionsPage = () => {
