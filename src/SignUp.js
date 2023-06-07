@@ -4,6 +4,8 @@ import { FiEye, FiEyeOff } from 'react-icons/fi';
 import useEndpoint from './hooks/useEndpoint';
 import { useNavigate } from 'react-router-dom';
 
+
+//TODO Fix error display
 const SignUp = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [dropdownOption, setDropdownOption] = useState("Basic");
@@ -35,7 +37,7 @@ const SignUp = () => {
             membership,
         };
 
-        // Make the API request
+        //Request
         try {
             await fetchData("/api/signup", 'POST', userData);
             navigate('/collections');
