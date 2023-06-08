@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import useEndpoint from "./hooks/useEndpoint";
 
 const Login = () => {
-  const { loading, error, fetchData } = useEndpoint();
+  const { loading, error, status, fetchData } = useEndpoint();
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -18,19 +18,28 @@ const Login = () => {
       password,
     };
 
+    //TODO Needs to click twice for some reason. Try-catch needed?
     //Request
     try {
-      await fetchData("/api/login", 'POST', userData);
-      navigate('/collections', {email: "test123"});
+      await fetchData("/api/login", 'POST', userData)
 
-    } catch (error) {
+      if(status === 200) {
+        navigate('/collections', {state: {email: email}});
+      } 
+      
+      else if(status === 403) {
       var x = document.getElementById("errorMessage");
       x.style.visibility = "visible"
+      };
+
+    } catch (error) {
+      if(status === 403) {
+        var x = document.getElementById("errorMessage");
+        x.style.visibility = "visible"
+      }
     }
-
+      
   };
-
-
 
   return (
     <Middiv>

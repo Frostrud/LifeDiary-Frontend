@@ -4,12 +4,14 @@ const useEndpoint = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [status, setStatus] = useState(null);
 
   const baseUrl = "http://localhost:8080"; // The base url for the endpoint.
 
   const fetchData = async (endpoint, method = 'GET', body = null) => {
     setLoading(true);
     setError(null);
+    setStatus(null);
 
     try {
       const response = await fetch(`${baseUrl}${endpoint}`, {
@@ -19,6 +21,8 @@ const useEndpoint = () => {
         },
         body: body ? JSON.stringify(body) : null,
       });
+
+      setStatus(response.status); // Extract and set response status
 
       if (!response.ok) {
         throw new Error('Request failed.');
@@ -33,8 +37,10 @@ const useEndpoint = () => {
     setLoading(false);
   };
 
-  return { data, loading, error, fetchData };
+  return { data, loading, error, status, fetchData };
 };
 
 export default useEndpoint;
+
+
 
