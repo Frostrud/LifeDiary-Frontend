@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Middiv from "./components/Middiv";
 import { useNavigate } from 'react-router-dom';
 import useEndpoint from "./hooks/useEndpoint";
@@ -6,6 +6,7 @@ import useEndpoint from "./hooks/useEndpoint";
 const Login = () => {
   const { loading, error, status, fetchData } = useEndpoint();
   const navigate = useNavigate();
+  const [userID, setUserID] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -21,12 +22,20 @@ const Login = () => {
     //TODO Needs to click twice for some reason. Try-catch needed?
     //Request
     try {
-      await fetchData("/api/login", 'POST', userData)
+      await fetchData("/api/login", 'POST', userData);
 
       if(status === 200) {
-        navigate('/collections', {state: {email: email}});
-      } 
-      
+        const response = await fetch("http://localhost:8080/api/getID/" + email, {
+          method: "GET",
+          headers: {
+              'Content-Type': 'application/json',
+            }
+      })
+
+          const data = await response.json();
+          setUserID(data)
+
+  }
       else if(status === 403) {
       var x = document.getElementById("errorMessage");
       x.style.visibility = "visible"
@@ -40,6 +49,13 @@ const Login = () => {
     }
       
   };
+
+  useEffect(() => {
+    if (userID !== null) {
+      navigate('/collections/' + userID, { state: { id: userID } });
+    }
+  }, [userID]);
+
 
   return (
     <Middiv>

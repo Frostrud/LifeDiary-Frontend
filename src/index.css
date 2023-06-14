@@ -313,3 +313,28 @@ input[type="submit"]:hover {
   }
 }
 
+
+/* Collection page */
+
+#collectorDiv {
+  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+#collectorDiv div {
+  border-radius: 4px solid #f3f3f3;
+  padding: 20px;
+  border: 10px;
+}
+
+.newCollectionButton {
+  height: 30%;
+  width: 5%;
+  box-shadow: 0 4px 4px #2980b9;
+}
