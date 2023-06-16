@@ -45,7 +45,7 @@
 }
 
 .signUpButton:hover {
-  background-color: #f1c40f;
+  background-color: #fff;
   color: #000000;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .otherPlansButton:hover {
-  background-color: #f1c40f;
+  background-color: #3498db;
   color: #000000;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .bottomButton:hover {
-  background-color: #f1c40f;
+  background-color: #3498db;
   color: #000000;
 }
 /* Navbar Content */
