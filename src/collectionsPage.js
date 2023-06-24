@@ -5,6 +5,9 @@ import useEndpoint from "./hooks/useEndpoint";
 import Modal from "react-modal";
 import CollectionForm from "./components/CollectionForm";
 
+//Documentation said it was smart to bind it to root
+Modal.setAppElement("#root");
+
 const CollectionsPage = () => {
     const location = useLocation();
     //TODO change it to use cookies in the future
@@ -20,46 +23,55 @@ const CollectionsPage = () => {
         setIsDialogOpen(false);
     };
 
-
-
     const createCollectionBox = (collectionName) => {
         var x = document.getElementById("collectorDiv");
         var newCollection = document.createElement("div");
-        newCollection.innerHTML = `<div id="collectionID">
-                                        <p>${collectionName}</p>
-                                    </div>`
+        newCollection.innerHTML = 
+    `
+    <div id="collectionDiv">
+      <p>${collectionName}</p>
+      <div classname ="collection-details">
+        <div className = "collectionSize">Collection amount</div>
+        <button className="toCollectionButton">
+          button
+        </button>
+      </div>
+    </div>
+  `;
         x.appendChild(newCollection);
     }
 
-    const addNewCollection = async(collectionName) => {
+
+
+    const addNewCollection = async (collectionName) => {
         console.log(collectionName);
-        
+
         try {
             const response = await fetch("http://localhost:8080/api/collections/add", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({name: collectionName, id: userID})
+                body: JSON.stringify({ name: collectionName, id: userID })
             })
             const status = response.status;
-            
-            
-            if(status === 200) {
+
+
+            if (status === 200) {
                 loadCollections();
             }
-            else if(status === 403) {
+            else if (status === 403) {
                 console.log("oh shit, forbidden")
             };
-      
-          } catch (exception) {
+
+        } catch (exception) {
             console.log("something went wrong")
-          }
-          
-          closeDialog();
+        }
+
+        closeDialog();
     }
 
-    const loadCollections = async(event) => {
+    const loadCollections = async (event) => {
         try {
             const response = await fetch("http://localhost:8080/api/collections/getCollectionsByUser=" + userID, {
                 method: "GET",
@@ -70,28 +82,28 @@ const CollectionsPage = () => {
 
             const responseData = await response.json();
             const status = response.status;
-            
-            
-            if(status === 200) {
+
+
+            if (status === 200) {
                 const collectionList = responseData;
-                
+
                 //Loop to remove existing children
                 var x = document.getElementById("collectorDiv");
-                while(x.firstChild) {
+                while (x.firstChild) {
                     x.removeChild(x.firstChild);
                 }
                 //Loop to create new children
-                for(var collection of collectionList) {
+                for (var collection of collectionList) {
                     createCollectionBox(collection.collectionName);
                 }
             }
-            else if(status === 403) {
+            else if (status === 403) {
                 console.log("oh shit, forbidden")
             };
-      
-          } catch (exception) {
+
+        } catch (exception) {
             console.log("something went wrong")
-          }
+        }
     }
 
 
@@ -101,7 +113,7 @@ const CollectionsPage = () => {
     }, [userID]);
 
     return (
-        <Middiv>
+        <Middiv id="collectionsMidDiv">
             <Modal isOpen={isDialogOpen}
                 onRequestClose={closeDialog}
                 contentLabel="Add New Collection">

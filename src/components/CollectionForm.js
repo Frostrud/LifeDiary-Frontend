@@ -14,7 +14,7 @@ const CollectionForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="collection-form" onSubmit={handleSubmit}>
       <input
         type="text"
         value={collectionName}
