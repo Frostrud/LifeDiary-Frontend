@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import useEndpoint from "./hooks/useEndpoint";
 import Modal from "react-modal";
 import CollectionForm from "./components/CollectionForm";
+import CollectionBox from "./components/collectionBox";
 
 //Documentation said it was smart to bind it to root
 Modal.setAppElement("#root");
@@ -14,6 +15,7 @@ const CollectionsPage = () => {
     const userID = location.state?.id;
     const { loading, error, fetchData, status, data } = useEndpoint();
     const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const [collectionsList, setCollectionsList] = useState();
 
     const newCollection = () => {
         setIsDialogOpen(true);
@@ -84,18 +86,10 @@ const CollectionsPage = () => {
             const status = response.status;
 
 
-            if (status === 200) {
-                const collectionList = responseData;
+            if (status === 200) { 
+                const List = responseData;
 
-                //Loop to remove existing children
-                var x = document.getElementById("collectorDiv");
-                while (x.firstChild) {
-                    x.removeChild(x.firstChild);
-                }
-                //Loop to create new children
-                for (var collection of collectionList) {
-                    createCollectionBox(collection.collectionName);
-                }
+                setCollectionsList(List);
             }
             else if (status === 403) {
                 console.log("oh shit, forbidden")
@@ -112,6 +106,9 @@ const CollectionsPage = () => {
         loadCollections();
     }, [userID]);
 
+    useEffect(() => {
+        console.log(collectionsList);
+    })
     return (
         <Middiv id="collectionsMidDiv">
             <Modal isOpen={isDialogOpen}
@@ -124,7 +121,9 @@ const CollectionsPage = () => {
                 +
             </button>
             <div id="collectorDiv">
-
+                {collectionsList && collectionsList.map((collection) => (
+                    <CollectionBox key={collection.id} collectionName={collection.collectionName} collectionId={collection.id}/>
+                ))}
             </div>
 
         </Middiv>

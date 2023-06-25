@@ -1,12 +1,16 @@
-const CollectionBox = (collectionName) => {
+import { Link } from "react-router-dom";
+
+const CollectionBox = ({ collectionName, collectionId }) => {
     return (
         <div id="collectionDiv">
-            <p>${collectionName}</p>
+            <p>{collectionName}</p>
             <div classname="collection-details">
-                <div className="collectionSize">Collection amount</div>
-                <button className="toCollectionButton">
-                    button
-                </button>
+                <Link to={`/collection/:${collectionId}`}>
+                    <button className="toCollectionButton">
+                        To Collection {collectionId}
+                    </button>
+                </Link>
+                
             </div>
         </div>
     );

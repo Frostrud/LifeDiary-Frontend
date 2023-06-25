@@ -8,6 +8,7 @@ import Contact from './contact';
 import About from './about';
 import Login from './login';
 import CollectionsPage from './collectionsPage';
+import Collection from './Collection';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path = "/about" element = {<About></About>} ></Route>
           <Route path = "/login" element = {<Login></Login>} ></Route>
           <Route path = "/collections/:userId" element = {<CollectionsPage></CollectionsPage>}></Route>
+          <Route path = "/collection/:collectionId" element = {<Collection></Collection>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

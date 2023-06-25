@@ -338,10 +338,12 @@ input[type="submit"]:hover {
 #collectionDiv {
   background-color: #f3f3f3;
   padding: 20px;
+  margin: 10px;
   border: 2px solid #ccc;
   border-radius: 4px;
-  margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 25%;
+  height: 30%;
 }
 
 #collectionDiv > p {
@@ -353,12 +355,9 @@ input[type="submit"]:hover {
   align-items: center;
 }
 
-.collection-amount {
-  margin-right: 10px;
-}
-
 .toCollectionButton {
-  padding: 8px 16px;
+  margin: 20px;
+  padding: 20px;
   background-color: #2980b9;
   color: white;
   border: none;
