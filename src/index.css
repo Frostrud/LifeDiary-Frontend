@@ -328,7 +328,7 @@ input[type="submit"]:hover {
 
 
 .newCollectionButton {
-  height: 30%;
+  height: 60%;
   width: 5%;
   box-shadow: 0 4px 4px #2980b9;
 }
@@ -370,8 +370,9 @@ input[type="submit"]:hover {
 .collection-form {
   display: flex;
   flex-direction: column;
-  max-width: 40px;
-  max-height: px;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
   margin: 0 auto;
 }
 

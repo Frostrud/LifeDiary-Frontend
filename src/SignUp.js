@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const SignUp = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [dropdownOption, setDropdownOption] = useState("Basic");
-    const { loading, error, fetchData } = useEndpoint();
+    const { loading, error, fetchData, status } = useEndpoint();
     const navigate = useNavigate();
 
     const togglePasswordVisibility = () => {
@@ -40,7 +40,21 @@ const SignUp = () => {
         //Request
         try {
             await fetchData("/api/signup", 'POST', userData);
-            navigate('/collections');
+            
+            if(status === 200) {
+                {
+                    const response = await fetch("http://localhost:8080/api/getID/" + email, {
+                      method: "GET",
+                      headers: {
+                          'Content-Type': 'application/json',
+                        }
+                  })
+            
+                      const userID = await response.json();
+                      navigate('/collections/' + userID, { state: { id: userID } });
+            
+              }
+            }
 
         } catch (error) {
 

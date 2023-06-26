@@ -25,29 +25,7 @@ const CollectionsPage = () => {
         setIsDialogOpen(false);
     };
 
-    const createCollectionBox = (collectionName) => {
-        var x = document.getElementById("collectorDiv");
-        var newCollection = document.createElement("div");
-        newCollection.innerHTML = 
-    `
-    <div id="collectionDiv">
-      <p>${collectionName}</p>
-      <div classname ="collection-details">
-        <div className = "collectionSize">Collection amount</div>
-        <button className="toCollectionButton">
-          button
-        </button>
-      </div>
-    </div>
-  `;
-        x.appendChild(newCollection);
-    }
-
-
-
     const addNewCollection = async (collectionName) => {
-        console.log(collectionName);
-
         try {
             const response = await fetch("http://localhost:8080/api/collections/add", {
                 method: "POST",
