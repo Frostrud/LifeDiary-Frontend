@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 
-const CollectionBox = ({ collectionName, collectionId }) => {
+const CollectionBox = ({ collectionName, collectionId, userID}) => {
     return (
         <div id="collectionDiv">
             <p>{collectionName}</p>
             <div classname="collection-details">
-                <Link to={`/collection/:${collectionId}`}>
+                <Link to=
+                { `/collection/:${collectionId}`} state = {{ userID: userID }}>
                     <button className="toCollectionButton">
-                        To Collection {collectionId}
+                        To Collection
                     </button>
                 </Link>
                 

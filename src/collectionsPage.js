@@ -100,7 +100,7 @@ const CollectionsPage = () => {
             </button>
             <div id="collectorDiv">
                 {collectionsList && collectionsList.map((collection) => (
-                    <CollectionBox key={collection.id} collectionName={collection.collectionName} collectionId={collection.id}/>
+                    <CollectionBox key={collection.id} collectionName={collection.collectionName} collectionId={collection.id} userID={userID}/>
                 ))}
             </div>
 
