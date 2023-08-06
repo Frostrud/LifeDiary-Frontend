@@ -6,7 +6,7 @@ const CollectionBox = ({ collectionName, collectionId, userID}) => {
             <p>{collectionName}</p>
             <div classname="collection-details">
                 <Link to=
-                { `/collection/:${collectionId}`} state = {{ userID: userID }}>
+                { `/collection/:${collectionId}`} state = {{ userID: userID, collectionID: collectionId }}>
                     <button className="toCollectionButton">
                         To Collection
                     </button>
