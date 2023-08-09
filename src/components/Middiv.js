@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../Navbar";
+import NavBar from "./Navbar";
 
 const Middiv = ({children}) => {
     return (
@@ -10,7 +10,6 @@ const Middiv = ({children}) => {
                 <div className="footerDiv">
                     <footer>© 2023 LifeDiary </footer>
                 </div>
-                
             </main>
         </div>
     );
