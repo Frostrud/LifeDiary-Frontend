@@ -346,6 +346,11 @@ input[type="submit"]:hover {
   height: 30%;
 }
 
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #collectionDiv > p {
   margin-bottom: 10px;
 }
@@ -434,3 +439,7 @@ input[type="submit"]:hover {
   padding: 20px;
   border: 2px solid #ccc;
 }
+
+/* Text Page */
+
+

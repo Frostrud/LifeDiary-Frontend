@@ -25,6 +25,28 @@ const CollectionsPage = () => {
         setIsDialogOpen(false);
     };
 
+    const deleteCollection = async (collectionID) => {
+        try {
+            const response = await fetch("http://localhost:8080/api/collections/deleteCollection=" + collectionID, {
+                method: "DELETE",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            const status = response.status;
+
+            if (status === 200) {
+                loadCollections();
+            }
+            else if (status === 403) {
+                console.log("oh shit, forbidden")
+            };
+
+        } catch (exception) {
+            console.log("something went wrong")
+        }
+    }
+
     const addNewCollection = async (collectionName) => {
         try {
             const response = await fetch("http://localhost:8080/api/collections/add", {
@@ -100,7 +122,7 @@ const CollectionsPage = () => {
             </button>
             <div id="collectorDiv">
                 {collectionsList && collectionsList.map((collection) => (
-                    <CollectionBox key={collection.id} collectionName={collection.collectionName} collectionId={collection.id} userID={userID}/>
+                    <CollectionBox key={collection.id} collectionName={collection.collectionName} collectionId={collection.id} userID={userID} deleteCollection={deleteCollection}/>
                 ))}
             </div>
 
