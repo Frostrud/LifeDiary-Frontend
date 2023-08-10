@@ -317,7 +317,7 @@ input[type="submit"]:hover {
 /* Collection page */
 
 #collectorDiv {
-  height: 100vh;
+  height: 100%;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -441,5 +441,28 @@ input[type="submit"]:hover {
 }
 
 /* Text Page */
+.textDiv {
+  background-color: #3498db;
+  display: flex;
+  justify-content: center;
+}
 
+.textWindow {
+  background-color: #3498db;
+  width: 80%;
+  height: 80%;
+}
 
+.textTopBar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f3f3f3;
+}
+
+.contentDiv {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f3f3f3;
+}

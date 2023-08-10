@@ -19,7 +19,7 @@ const ItemForm = ({ onSubmit }) => {
         type="text"
         value={itemName}
         onChange={handleNameChange}
-        placeholder="Enter collection name"
+        placeholder="Enter Item name"
       />
       <button type="submit">Submit</button>
     </form>

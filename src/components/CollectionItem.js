@@ -11,7 +11,7 @@ const CollectionItem = ({ headLine, content, textID }) => {
             </div>
             <div>
                 <Link to=
-                    {`/collection/TODO`} state={{}}>
+                    {`/texts/:${textID}`} state={{ textID }}>
                     <button className="toItemButton">
                         To Item
                     </button>

@@ -9,6 +9,7 @@ import About from './about';
 import Login from './login';
 import CollectionsPage from './collectionsPage';
 import Collection from './Collection';
+import Text from './pages/Text';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path = "/login" element = {<Login></Login>} ></Route>
           <Route path = "/collections/:userId" element = {<CollectionsPage></CollectionsPage>}></Route>
           <Route path = "/collection/:collectionId" element = {<Collection></Collection>}></Route>
+          <Route path = "/texts/:textId" element = {<Text></Text>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

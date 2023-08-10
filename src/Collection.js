@@ -49,7 +49,7 @@ const Collection = () => {
         closeDialog();
     }
 
-    const loadCollections = async (event) => {
+    const loadCollections = async () => {
         try {
             const response = await fetch("http://localhost:8080/api/collections/getSingleCollectionByCollectionID=" + collectionID, {
                 method: "GET",
