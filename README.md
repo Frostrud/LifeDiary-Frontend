@@ -1,6 +1,6 @@
 # LifeDiary Frontend
 
-A showcase project for a website made using React. The website is planned to be a Cloud storage site that supports documents and images. The user can create an account and login where they will have their own homescreen with one or more collections. These collections can store either a text document or an image.
+A showcase project for a website made using React. The website is planned to be a Cloud storage site that supports documents and images. The user can create an account and login where they will have their own homescreen with one or more collections. These collections can store either several text documents or images.
 
 This repo is made to run with the accompanying backend project located [at this repo](https://github.com/Frostrud/LifeDiary-Backend).
 
